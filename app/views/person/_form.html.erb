@@ -1,0 +1,35 @@
+<%= form_tag(:persons => "/persons/create", :action => "create", :method => "post") do %>
+
+  <div class="field">
+  <%= label_tag :first_name %>
+  <%= text_field_tag :first_name, params[:first_name] %>
+  </div>
+
+  <div class="field">
+  <%= label_tag :last_name %>
+  <%= text_field_tag :last_name, params[:last_name] %>
+  </div>
+
+  <div class="field">
+  <%= label_tag :birth_name %>
+  <%= date_select :birth_name, params[:birth_name] %>
+  </div>
+
+  <div class="field">
+  <%= label_tag :description %>
+  <%= text_field_tag :description, params[:description] %>
+  </div>
+
+  <div class="field">
+    <%= label_tag :Director %>
+    <%= radio_button_tag(:type, "Director") %>
+    <%= label_tag :Actor %>
+    <%= radio_button_tag(:type, "Actor")%>
+  </div>
+
+  <div class="actions">
+  <%= submit_tag "Forward" %>
+  </div>
+<% end %>
+
+
