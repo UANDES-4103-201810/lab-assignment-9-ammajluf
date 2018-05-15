@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 20180515161519) do
   create_table "actors", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
-    t.date "birth_name"
+    t.date "birth_date"
     t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -50,7 +50,7 @@ ActiveRecord::Schema.define(version: 20180515161519) do
   create_table "directors", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
-    t.date "birth_name"
+    t.date "birth_date"
     t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

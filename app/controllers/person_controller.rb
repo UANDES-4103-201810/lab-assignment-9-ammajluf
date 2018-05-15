@@ -9,11 +9,15 @@ class PersonController < ApplicationController
   end
 
   def create
-    puts params
+    # puts params
+
     if params[:type]== "Actor"
-      @actor = Actor.new(first_name:params[:first_name],last_name:params[:last_name],birth_date:params[:birth_date],description: params[:description])
+      @actor = Actor.create(first_name:params[:first_name],last_name:params[:last_name],birth_date:params[:birth_name],description: params[:description])
     else
-      @director = Director.new(first_name:params[:first_name],last_name:params[:last_name],birth_date:params[:birth_date],description: params[:description])
+      @director = Director.create(first_name:params[:first_name],last_name:params[:last_name],birth_date:params[:birth_name],description: params[:description])
     end
+
   end
+
+
 end
