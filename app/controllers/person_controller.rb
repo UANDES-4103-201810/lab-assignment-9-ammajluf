@@ -1,8 +1,11 @@
 class PersonController < ApplicationController
 
   def index
+
     @actors = Actor.all
     @directors = Director.all
+
+
   end
 
   def new
@@ -12,9 +15,9 @@ class PersonController < ApplicationController
     # puts params
 
     if params[:type]== "Actor"
-      @actor = Actor.create(first_name:params[:first_name],last_name:params[:last_name],birth_date:params[:birth_name],description: params[:description])
+      @actor = Actor.create(first_name:params[:first_name],last_name:params[:last_name],birth_date:params[:birth_date],description: params[:description])
     else
-      @director = Director.create(first_name:params[:first_name],last_name:params[:last_name],birth_date:params[:birth_name],description: params[:description])
+      @director = Director.create(first_name:params[:first_name],last_name:params[:last_name],birth_date:params[:birth_date],description: params[:description])
     end
 
   end
